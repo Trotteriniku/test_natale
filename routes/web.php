@@ -14,4 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/natale', [create_test_controller_table::class, 'index'])->name('test');
+Route::get('/', function () {
+    return view('home');
+});
+
+Route::get('/natale', [create_test_controller_table::class, 'index'])->name('test.index');

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\create_test_controller_table;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/natale', function () {
-    return view('test.index');
-});
+Route::get('/natale', [create_test_controller_table::class, 'index'])->name('test');
